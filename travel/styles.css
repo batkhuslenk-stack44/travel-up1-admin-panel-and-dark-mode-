@@ -1,0 +1,368 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: whitesmoke;
+}
+
+nav {
+    background-color: rgb(18, 93, 199);
+    color: white;
+    padding: 0;
+    text-align: left;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+}
+
+nav ul {
+
+    display: flex;
+    gap: 2rem;
+    justify-content: flex-start;
+    margin: 0;
+    padding: 0.5rem 1rem;
+    /* Space for the dark mode button */
+    list-style-type: none;
+    color: white;
+    margin: 0.5em;
+
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+    color: yellow;
+
+}
+
+#toggle-dark-mode {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    padding: 0.7rem 1.5rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+#toggle-dark-mode:hover {
+    transform: translateY(-50%) scale(1.05);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+#toggle-dark-mode:active {
+    transform: translateY(-50%) scale(0.98);
+}
+
+/* Dark mode styles */
+body.dark-mode {
+    background-color: #1a1a1a;
+    color: #f0f0f0;
+}
+
+body.dark-mode nav {
+    background-color: #0d0d0d;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode section {
+    background-color: #1a1a1a;
+}
+
+body.dark-mode section h2 {
+    color: #667eea;
+}
+
+body.dark-mode .skill-grid,
+body.dark-mode .project-item {
+    background-color: #2a2a2a;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .skill-grid h3,
+body.dark-mode .project-item h3 {
+    color: #667eea;
+}
+
+body.dark-mode .skill-grid p,
+body.dark-mode .project-item p {
+    color: #ccc;
+}
+
+body.dark-mode #contact input,
+body.dark-mode #contact textarea {
+    background-color: #2a2a2a;
+    border-color: #444;
+    color: #f0f0f0;
+}
+
+body.dark-mode footer {
+    background-color: #0d0d0d;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode #toggle-dark-mode {
+    background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+    box-shadow: 0 4px 15px rgba(118, 75, 162, 0.4);
+}
+
+#hero {
+    background: url(https://outofnowhere.asia/mn/wp-content/uploads/sites/10/2018/02/camp-night-master-slider.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#hero .hero-content {
+    text-align: center;
+    color: white;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.delgere {
+    background-color: rgb(247, 243, 4);
+    color: #000;
+    font-size: 1.2rem;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 9px;
+    padding: 0.8rem 1.5rem;
+}
+
+section {
+    padding: 5rem 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: rgb(18, 93, 199);
+}
+
+.about-content {
+
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    font-size: 1.5rem;
+    max-width: 800px;
+    margin: 0 auto;
+
+}
+
+.about-content img {
+    max-width: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.about-content p {
+    line-height: 1.6;
+    font-size: 1.2rem;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.skill-grid {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.skill-grid:hover {
+    transform: translateY(-5px);
+}
+
+.skill-grid h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: rgb(18, 93, 199);
+}
+
+.skill-grid p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+
+    img {
+        width: 200px;
+        border-radius: 10px;
+        object-fit: cover;
+    }
+}
+
+.project-item {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.project-item:hover {
+    transform: translateY(-5px);
+}
+
+.project-item h3 {
+    font-size: 1.5rem;
+    margin: 0.5rem 0;
+    color: rgb(18, 93, 199);
+}
+
+.project-item p {
+    font-size: 1rem;
+    color: #555;
+}
+
+#contact form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#contact input,
+#contact textarea {
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+#contact button {
+    padding: 0.8rem;
+    background-color: rgb(18, 93, 199);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#contact button:hover {
+    background-color: rgb(14, 72, 155);
+}
+
+footer {
+    background-color: rgb(18, 93, 199);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+#admin-panel {
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px auto;
+    max-width: 600px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#login-section {
+    max-width: 400px;
+    margin: 100px auto 20px;
+    /* Center vertically roughly */
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+#login-section h2,
+#admin-panel h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#admin-password {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#login-btn,
+#edit-mode-btn,
+#save-btn,
+#logout-btn {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    color: white;
+    background-color: rgb(18, 93, 199);
+    transition: background-color 0.3s;
+}
+
+#login-btn:hover,
+#edit-mode-btn:hover,
+#save-btn:hover,
+#logout-btn:hover {
+    background-color: rgb(14, 72, 155);
+}
+
+.editable {
+    border: 2px dashed #2ecc71;
+    padding: 5px;
+    border-radius: 4px;
+    background-color: rgba(46, 204, 113, 0.1);
+    outline: none;
+}

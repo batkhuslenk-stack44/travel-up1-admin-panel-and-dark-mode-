@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="#hero">ホーム</a></li>
+            <li><a href="#about">私について</a></li>
+            <li><a href="#skill">スキル</a></li>
+            <li><a href="#projects">プロジェクト</a></li>
+            <li><a href="#contact">連絡先</a></li>
+            <li><a href="launge">launge</a></li>
+        </ul>
+        <button id="toggle-dark-mode">ダークモード</button>
+    </nav>
+
+
+
+
+    <section id="hero">
+        <div class="hero-content">
+            <h1>創世 旅行</h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. A, molestias?</p>
+            <a href="#projects" class="delgere">詳細を見る</a>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>私について</h2>
+        <div class="about-content">
+            <a href="#about"></a>
+            <img src="https://picsum.photos/800/600?random=1" alt="nature mongolia " class="profile picture">
+            <p>t. Quo fugit atque consequatur, sint necessitatibus quia!</p>
+        </div>
+        </div>
+    </section>
+
+    <section id="skill">
+
+        <h2>スキル</h2>
+        <div class="skills-grid">
+
+            <div class="skill-grid">
+                <h3>Морь унан</h3>
+                <P> mongol mori ayultai hagas baigal</P>
+            </div>
+
+            <div class="skill-grid">
+                <h3>gal tulch surna</h3>
+                <P> mongol mori ayultai hagas baigal</P>
+            </div>
+
+            <div class="skill-grid">
+                <h3>nom sum harvaj surna </h3>
+                <P> mongol mori ayultai hagas baigal</P>
+            </div>
+
+            <div class="skill-grid">
+                <h3>amdril</h3>
+                <P> mongol mori ayultai hagas baigal</P>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>プロジェクト</h2>
+        <div class="projects-grid">
+
+            <div class="project-item">
+                <img src="https://picsum.photos/800/600?random=1" alt="p1">
+                <h3>プロジェクト1</h3>
+                <p>プロジェクトの詳細</p>
+            </div>
+            <div class="project-item">
+                <img src="https://picsum.photos/800/600?random=2" alt="p2">
+                <h3>プロジェクト1</h3>
+                <p>プロジェクXX詳細</p>
+            </div>
+
+            <div class="project-item">
+                <img src="https://picsum.photos/800/600?random=4" alt="p4">
+                <h3>プロジェクト1</h3>
+                <p>プロジェクトの詳細</p>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>連絡先</h2>
+        <form>
+            <input type="text" id="name" placeholder="name " required>
+            <input type="email" id="email" placeholder="email" required>
+            <textarea id="message" placeholder="message" required></textarea>
+
+            <button type="submit">送信</button>
+        </form>
+    </section>
+    <footer>
+        <p>2026 無断転載禁止</p>
+    </footer>
+    <section id="login-section">
+        <h2>Админ нэвтрэх</h2>
+        <input type="password" id="admin-password" placeholder="Нууц үг">
+        <button id="login-btn">Нэвтрэх</button>
+        <p id="login-error" style="color: red;"></p>
+    </section>
+
+    <section id="admin-panel" style="display: none;">
+        <h2>Админ самбар</h2>
+        <button id="edit-mode-btn">Засвар хийх</button>
+        <button id="save-btn">Бүгдийг хадгалах</button>
+        <button id="logout-btn">Гарах</button>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
